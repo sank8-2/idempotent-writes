@@ -1,0 +1,25 @@
+{
+  "name": "idempotent-writes",
+  "version": "0.1.0",
+  "description": "Failproof policy pack: require idempotency keys and block blind retries on agent side effects",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "author": "sank8-2",
+  "scripts": {
+    "test": "node --test",
+    "policy:test": "node scripts/run-policy-tests.mjs",
+    "postinstall": "node scripts/patch-failproofai-package.mjs",
+    "demo:deny": "node scripts/demo-cases.mjs deny",
+    "demo:allow": "node scripts/demo-cases.mjs allow"
+  },
+  "keywords": [
+    "failproofai",
+    "agent-reliability",
+    "idempotency",
+    "side-effects"
+  ],
+  "dependencies": {
+    "failproofai": "^1.0.12"
+  }
+}
